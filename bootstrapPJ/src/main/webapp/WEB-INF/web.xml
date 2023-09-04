@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns="http://Java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         id="WebApp_ID" version="2.5">
+https://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
 
-    <display-name>bootstrapPJ</display-name>
+	<display-name>bootstrapPJ</display-name>
     
+	<!-- 전역 세션 유효시간 설정(분단위) ==> 60분으로 셋팅 -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+  
    <!--
 		- Location of the XML file that defines the root application context.
 		- Applied by ContextLoaderListener.
@@ -26,17 +31,18 @@ https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	-->
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
+<!--         <servlet-class>main.java.pe.kr.bst.HomeController.java</servlet-class> -->
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/mvc-config.xml</param-value>
+            <param-value>/WEB-INF/spring/servlet/mvc-*.xml</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup>
+<!--         <load-on-startup>1</load-on-startup> -->
     </servlet>
 
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
 </web-app>

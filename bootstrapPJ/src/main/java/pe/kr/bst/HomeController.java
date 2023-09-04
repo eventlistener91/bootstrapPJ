@@ -8,6 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HomeController extends HttpServlet{
+	
+	/*
+	URL 			: http://localhost:8080/Test/TestMember/MemberList.jsp
+	URI 			: 		   			   /Test/TestMember/MemberList.jsp
+	Context Path	:		   			   /Test
+	Servlet Path	:			    			/TestMember/MemberList.jsp
+	*/
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
