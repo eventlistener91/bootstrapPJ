@@ -14,6 +14,7 @@ public class HomeController extends HttpServlet{
 	URI 			: 		   			   /Test/TestMember/MemberList.jsp
 	Context Path	:		   			   /Test
 	Servlet Path	:			    			/TestMember/MemberList.jsp
+	http://localhost:8080/.do
 	*/
 
 	@Override

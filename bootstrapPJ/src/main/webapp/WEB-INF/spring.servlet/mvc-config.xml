@@ -13,12 +13,9 @@
          </context:component-scan>  
 
 
-
+	<!-- mvc:annotation-driven = 선언만으로도 유효하다. -->
     <mvc:annotation-driven />
 
-<!-- 	<context:component-scan base-package="kr.or.inair"> -->
-<!-- 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> -->
-<!-- 	</context:component-scan> -->
 <!-- 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
 <!-- 	        Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
 <!-- 	        <property name="prefix" value="/WEB-INF/view/"/> -->
